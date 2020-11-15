@@ -3,11 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 import { requestMovies } from '../store/actions/moviesActions';
-import { getAllMovies, getParams } from '../store/selectors';
+import { getAllMovies } from '../store/selectors';
 import MoviesList from '../components/MoviesList';
 import NotFound from '../components/NotFound';
-
-// const useQuery = () => new URLSearchParams(useLocation().search);
 
 const MoviesContainer = React.memo(() => {
     const dispatch = useDispatch();
@@ -34,12 +32,6 @@ const MoviesContainer = React.memo(() => {
     }, [dispatch, location]);
 
     const movies = useSelector(getAllMovies);
-    // const params = useSelector(getParams);
-    console.log(searchParams);
-
-    // useEffect(() => {
-    //     dispatch(requestMovies(searchParams));
-    // }, [dispatch, searchParams]);
 
     return movies.length > 0 ? <MoviesList movies={movies} /> : <NotFound />;
 });
