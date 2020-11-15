@@ -20,9 +20,9 @@ const App = ({ Router, location, context, store }) => {
             <ErrorBoundary>
                 <Router location={location} context={context}>
                     <Switch>
-                        {/* <Route exact path="/" component={MovieList} /> */}
+                        <Route exact path="/" component={MovieList} />
                         {/* <Route exact path="/" component={SearchMoviesPage} /> */}
-                        <Route exact path="/" component={About} />
+                        <Route exact path="/about" component={About} />
                         <Route exact path="/search" component={SearchMoviesPage} />
                         <Route exact path="/movie/:id" component={MovieDetailsPage} />
                         <Route path="*" component={Page404} />
