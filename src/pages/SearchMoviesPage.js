@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import MoviesContainer from '../containers/MoviesContainer';
 import Header from '../containers/Header';
 import ActionBar from '../components/ActionBar';
-import NotFound from '../components/NotFound';
 
 const SearchMoviesPage = () => {
 
@@ -12,7 +11,6 @@ const SearchMoviesPage = () => {
             <Header/>
             <MovieContainerWrapper>
                 <ActionBar />
-                {/* <NotFound /> */}
                 <MoviesContainer />
             </MovieContainerWrapper>
         </Wrapper>

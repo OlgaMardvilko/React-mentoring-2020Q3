@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_GATEWAY = `http://localhost:4000/movies`;
+export const API_GATEWAY = `https://reactjs-cdp.herokuapp.com/movies`;
 const SUCCESS_DELETE_CODE = 204;
 const SUCCESS_UPDATE_CODE = 200;
 
